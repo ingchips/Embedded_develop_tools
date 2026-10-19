@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "channel": "stable",
+  "baseUrl": "https://github.com/ingchips/Embedded_develop_tools/releases/download/tools-v1/",
+  "mirrors": [],
+  "components": [
+    {
+      "id": "arm-gcc",
+      "version": "15.2-slim-lto",
+      "sizeBytes": 72759093,
+      "archive": "arm-none-eabi-toolchain-15.2-slim-lto.7z",
+      "sha256": "9e780e955b5dbc9beca484bcf8b9e20527ae4e142ed3946e6acbd3a20919102a",
+      "provides": [
+        "bin/arm-none-eabi-gcc.exe",
+        "bin/arm-none-eabi-g++.exe",
+        "bin/arm-none-eabi-objcopy.exe",
+        "bin/arm-none-eabi-size.exe",
+        "bin/arm-none-eabi-ar.exe",
+        "bin/arm-none-eabi-gcc-ar.exe"
+      ],
+      "optional": ["bin/arm-none-eabi-gdb.exe"],
+      "rootMarkers": ["bin/arm-none-eabi-gcc.exe", "arm-none-eabi-gcc.exe"],
+      "env": { "PATH+": ["bin"] }
+    },
+    {
+      "id": "make",
+      "version": "4.1",
+      "sizeBytes": 102372,
+      "archive": "make.7z",
+      "sha256": "5e711527eded49d2f8a9ea4b5de89d40c0ea38e28681cfde1cf19641967f2cd5",
+      "provides": ["bin/make.exe"],
+      "rootMarkers": ["bin/make.exe", "make.exe"],
+      "env": { "PATH+": ["bin"] }
+    },
+    {
+      "id": "openocd",
+      "version": "0.12.0-rc",
+      "sizeBytes": 6916170,
+      "archive": "openocd-0.12.0-rc.7z",
+      "sha256": "c12d6214a199c0db21401269e301df30b039909b06ad502106bcca398f226ddf",
+      "provides": ["bin/openocd.exe"],
+      "rootMarkers": ["bin/openocd.exe", "openocd.exe"],
+      "env": { "PATH+": ["bin"], "OPENOCD_SCRIPTS+": ["share/openocd/scripts"] }
+    }
+  ]
+}
